@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRC Cards — Campus Event Platform</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f3f4f6;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 2rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  header h1 { font-size: 1.2rem; color: #111; }
+  header p { font-size: 0.75rem; color: #666; margin-top: 0.25rem; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1.25rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-top: 3px solid var(--accent);
+  }
+
+  .card-header {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-title { font-weight: bold; font-size: 0.9rem; color: #111; }
+
+  .card-tag {
+    font-size: 0.65rem;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.1rem 0.4rem;
+    text-transform: uppercase;
+  }
+
+  .card-body { display: grid; grid-template-columns: 1fr 1fr; }
+
+  .col { padding: 0.75rem 0.9rem; }
+  .col:first-child { border-right: 1px solid #e5e7eb; }
+
+  .col-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  ul { list-style: disc; padding-left: 1.1rem; }
+  li { color: #333; line-height: 1.5; margin-bottom: 0.15rem; }
+
+  .card-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 0.4rem 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    background: #fafafa;
+  }
+
+  .us-tag {
+    font-size: 0.6rem;
+    color: #666;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    padding: 0.1rem 0.35rem;
+  }
+
+  .c1 { --accent: #2563eb; }
+  .c2 { --accent: #16a34a; }
+  .c3 { --accent: #d97706; }
+  .c4 { --accent: #7c3aed; }
+  .c5 { --accent: #dc2626; }
+  .c6 { --accent: #0891b2; }
+  .c7 { --accent: #db2777; }
+  .c8 { --accent: #65a30d; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CRC Cards</h1>
+  <p>Campus Event Discovery &amp; Management Platform</p>
+</header>
+
+<div class="grid">
+
+  <!-- Student -->
+  <div class="card c1">
+    
+    <div class="card-header">
+      <span class="card-title">Student</span>
+      <span class="card-tag">Primary User</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Browse, search &amp; filter events</li>
+          <li>Filter by date, location, tags, major/school</li>
+          <li>Follow topics &amp; organizers</li>
+          <li>RSVP, cancel RSVP, join waitlist</li>
+          <li>Purchase ticket via online transfer</li>
+          <li>Bookmark events for later</li>
+          <li>Export events to personal calendar</li>
+          <li>Submit post-event feedback</li>
+          <li>Set interest preferences on first login</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Event</li>
+          <li>Ticket</li>
+          <li>Notification Service</li>
+          <li>Discovery Feed</li>
+          <li>Calendar Integration</li>
+          <li>Recommendation Engine</li>
+          <li>Authentication Service</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-001</span><span class="us-tag">US-002</span><span class="us-tag">US-003</span><span class="us-tag">US-004</span><span class="us-tag">US-005</span><span class="us-tag">US-006</span><span class="us-tag">US-007</span><span class="us-tag">US-008</span><span class="us-tag">US-009</span><span class="us-tag">US-010</span><span class="us-tag">US-011</span><span class="us-tag">US-012</span><span class="us-tag">US-013</span><span class="us-tag">US-014</span><span class="us-tag">US-015</span><span class="us-tag">US-016</span><span class="us-tag">US-017</span><span class="us-tag">US-041</span><span class="us-tag">US-042</span><span class="us-tag">US-043</span><span class="us-tag">US-044</span><span class="us-tag">US-045</span><span class="us-tag">US-046</span>
+    </div>
+  </div>
+
+  <!-- Event Organizer -->
+  <div class="card c2">
+    
+    <div class="card-header">
+      <span class="card-title">Event Organizer</span>
+      <span class="card-tag">Creator</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Create, edit &amp; delete events</li>
+          <li>Set capacity, ticket types &amp; pricing</li>
+          <li>Set &amp; extend registration windows</li>
+          <li>Upload media graphics &amp; contact info</li>
+          <li>Attach custom registration forms</li>
+          <li>Broadcast updates to RSVP'd attendees</li>
+          <li>View rejection feedback &amp; resubmit</li>
+          <li>View registration &amp; attendance analytics</li>
+          <li>Generate shareable QR codes &amp; links</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Event</li>
+          <li>Administrator</li>
+          <li>Notification Service</li>
+          <li>Ticket</li>
+          <li>Analytics Dashboard</li>
+          <li>Authentication Service</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-018</span><span class="us-tag">US-019</span><span class="us-tag">US-020</span><span class="us-tag">US-021</span><span class="us-tag">US-022</span><span class="us-tag">US-023</span><span class="us-tag">US-024</span><span class="us-tag">US-025</span><span class="us-tag">US-026</span><span class="us-tag">US-027</span><span class="us-tag">US-033</span><span class="us-tag">US-034</span><span class="us-tag">US-035</span><span class="us-tag">US-040</span><span class="us-tag">US-047</span><span class="us-tag">US-048</span>
+    </div>
+  </div>
+
+  <!-- Administrator -->
+  <div class="card c3">
+    
+    <div class="card-header">
+      <span class="card-title">Administrator</span>
+      <span class="card-tag">Oversight</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Approve or reject pending events</li>
+          <li>Provide mandatory rejection reasons</li>
+          <li>View full event details before deciding</li>
+          <li>Feature high-priority events in feed</li>
+          <li>Manage organizer &amp; student accounts</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Event</li>
+          <li>Event Organizer</li>
+          <li>Notification Service</li>
+          <li>Discovery Feed</li>
+          <li>Authentication Service</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-028</span><span class="us-tag">US-029</span><span class="us-tag">US-030</span><span class="us-tag">US-031</span><span class="us-tag">US-032</span><span class="us-tag">US-036</span>
+    </div>
+  </div>
+
+  <!-- Event -->
+  <div class="card c4">
+    
+    <div class="card-header">
+      <span class="card-title">Event</span>
+      <span class="card-tag">Core Entity</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Store title, description, date, time, venue</li>
+          <li>Hold category, tags &amp; media assets</li>
+          <li>Track capacity &amp; remaining spots</li>
+          <li>Manage waitlist queue</li>
+          <li>Maintain approval status lifecycle</li>
+          <li>Store organizer contact details</li>
+          <li>Validate mandatory fields pre-submission</li>
+          <li>Track registration window open/close</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Student</li>
+          <li>Event Organizer</li>
+          <li>Administrator</li>
+          <li>Ticket</li>
+          <li>Notification Service</li>
+          <li>Discovery Feed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-001</span><span class="us-tag">US-011</span><span class="us-tag">US-015</span><span class="us-tag">US-018</span><span class="us-tag">US-019</span><span class="us-tag">US-021</span><span class="us-tag">US-027</span><span class="us-tag">US-034</span><span class="us-tag">US-042</span><span class="us-tag">US-047</span>
+    </div>
+  </div>
+
+  <!-- Ticket -->
+  <div class="card c5">
+    
+    <div class="card-header">
+      <span class="card-title">Ticket</span>
+      <span class="card-tag">Transaction</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Issue ticket (free / paid / member-only)</li>
+          <li>Generate QR code for check-in</li>
+          <li>Process payment via online transfer</li>
+          <li>Handle refunds on cancellation</li>
+          <li>Track ticket status (active/used/refunded)</li>
+          <li>Enforce capacity limits on issue</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Student</li>
+          <li>Event</li>
+          <li>Payment Gateway</li>
+          <li>Notification Service</li>
+          <li>Event Organizer</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-006</span><span class="us-tag">US-009</span><span class="us-tag">US-011</span><span class="us-tag">US-012</span><span class="us-tag">US-013</span><span class="us-tag">US-017</span><span class="us-tag">US-024</span><span class="us-tag">US-046</span>
+    </div>
+  </div>
+
+  <!-- Notification Service -->
+  <div class="card c6">
+    
+    <div class="card-header">
+      <span class="card-title">Notification Service</span>
+      <span class="card-tag">Messaging</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Send 24-hour event reminders</li>
+          <li>Alert students of scheduling conflicts</li>
+          <li>Notify bookmark deadline / low ticket thresholds</li>
+          <li>Push event update &amp; cancellation alerts</li>
+          <li>Send rejection feedback to organizers</li>
+          <li>Notify waitlisted students of open spots</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Student</li>
+          <li>Event Organizer</li>
+          <li>Administrator</li>
+          <li>Event</li>
+          <li>Ticket</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-007</span><span class="us-tag">US-010</span><span class="us-tag">US-020</span><span class="us-tag">US-032</span><span class="us-tag">US-033</span><span class="us-tag">US-040</span><span class="us-tag">US-045</span>
+    </div>
+  </div>
+
+  <!-- Discovery Feed & Recommendation Engine -->
+  <div class="card c7">
+    
+    <div class="card-header">
+      <span class="card-title">Discovery Feed &amp; Recommendations</span>
+      <span class="card-tag">Personalisation</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Display approved events in ranked feed</li>
+          <li>Surface admin-pinned featured events</li>
+          <li>Personalise feed by followed topics &amp; organizers</li>
+          <li>Support keyword search</li>
+          <li>Apply multi-dimension filters (date, location, tag, major)</li>
+          <li>Surface deadline-imminent events</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Student</li>
+          <li>Event</li>
+          <li>Administrator</li>
+          <li>Calendar Integration</li>
+          <li>Authentication Service</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-003</span><span class="us-tag">US-004</span><span class="us-tag">US-005</span><span class="us-tag">US-028</span><span class="us-tag">US-030</span><span class="us-tag">US-039</span><span class="us-tag">US-041</span><span class="us-tag">US-042</span>
+    </div>
+  </div>
+
+  <!-- Authentication Service -->
+  <div class="card c1">
+    
+    <div class="card-header">
+      <span class="card-title">Authentication Service</span>
+      <span class="card-tag">Security</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Authenticate users via email &amp; password</li>
+          <li>Support university SSO login</li>
+          <li>Handle password reset via email link</li>
+          <li>Enforce role-based access (student / organizer / admin)</li>
+          <li>Maintain session security</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Student</li>
+          <li>Event Organizer</li>
+          <li>Administrator</li>
+          <li>Discovery Feed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-035</span><span class="us-tag">US-036</span><span class="us-tag">US-037</span><span class="us-tag">US-038</span><span class="us-tag">US-039</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
