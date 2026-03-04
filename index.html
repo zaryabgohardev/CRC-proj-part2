@@ -4,97 +4,188 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CRC Cards — Campus Event Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --bg: #F5F0E8;
+    --paper: #FDFAF4;
+    --ink: #1C1917;
+    --ink-light: #57534E;
+    --rule: #D6CFC2;
+    --stamp-1: #C1440E;
+    --stamp-2: #1D5E3A;
+    --stamp-3: #1E3A5F;
+    --stamp-4: #7B2D8B;
+    --stamp-5: #B5451B;
+    --stamp-6: #0F4C5C;
+    --stamp-7: #5C3D1E;
+    --stamp-8: #3B6E22;
+  }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: #f3f4f6;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    padding: 2rem;
+    background: var(--bg);
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.04) 27px, rgba(0,0,0,0.04) 28px);
+    font-family: 'DM Sans', sans-serif;
+    padding: 3rem 2rem;
+    min-height: 100vh;
   }
 
   header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
-  header h1 { font-size: 1.2rem; color: #111; }
-  header p { font-size: 0.75rem; color: #666; margin-top: 0.25rem; }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  header p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--ink-light);
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 1.25rem;
-    max-width: 1300px;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
     margin: 0 auto;
   }
 
   .card {
-    background: #fff;
-    border: 1px solid #d1d5db;
-    border-top: 3px solid var(--accent);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 3px 3px 0 var(--rule), 6px 6px 0 rgba(0,0,0,0.04);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--rule), 10px 10px 0 rgba(0,0,0,0.06);
   }
 
   .card-header {
-    padding: 0.6rem 0.9rem;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 2px solid var(--accent);
+    padding: 0.9rem 1.2rem 0.75rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    gap: 1rem;
   }
 
-  .card-title { font-weight: bold; font-size: 0.9rem; color: #111; }
+  .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    color: var(--ink);
+    flex: 1;
+  }
 
   .card-tag {
+    font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 0.1rem 0.4rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border: 1.5px solid currentColor;
+    border-radius: 2px;
+    white-space: nowrap;
+    color: var(--accent);
+    border-color: var(--accent);
   }
 
-  .card-body { display: grid; grid-template-columns: 1fr 1fr; }
+  .card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-  .col { padding: 0.75rem 0.9rem; }
-  .col:first-child { border-right: 1px solid #e5e7eb; }
+  .col {
+    padding: 1rem 1.2rem 1.2rem;
+  }
+
+  .col:first-child {
+    border-right: 1px solid var(--rule);
+  }
 
   .col-label {
-    font-size: 0.65rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #888;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    color: var(--ink-light);
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--rule);
   }
 
-  ul { list-style: disc; padding-left: 1.1rem; }
-  li { color: #333; line-height: 1.5; margin-bottom: 0.15rem; }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    font-size: 0.8rem;
+    color: var(--ink);
+    line-height: 1.5;
+    padding: 0.22rem 0;
+    border-bottom: 1px dotted var(--rule);
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  li:last-child { border-bottom: none; }
+
+  li::before {
+    content: '—';
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--ink-light);
+    flex-shrink: 0;
+  }
 
   .card-footer {
-    border-top: 1px solid #e5e7eb;
-    padding: 0.4rem 0.9rem;
+    border-top: 1px solid var(--rule);
+    padding: 0.55rem 1.2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3rem;
-    background: #fafafa;
+    gap: 0.35rem;
+    background: rgba(0,0,0,0.015);
   }
 
   .us-tag {
+    font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
-    color: #666;
-    background: #f3f4f6;
-    border: 1px solid #d1d5db;
-    padding: 0.1rem 0.35rem;
+    color: var(--ink-light);
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
   }
 
-  .c1 { --accent: #2563eb; }
-  .c2 { --accent: #16a34a; }
-  .c3 { --accent: #d97706; }
-  .c4 { --accent: #7c3aed; }
-  .c5 { --accent: #dc2626; }
-  .c6 { --accent: #0891b2; }
-  .c7 { --accent: #db2777; }
-  .c8 { --accent: #65a30d; }
+  .c1 { --accent: var(--stamp-1); }
+  .c2 { --accent: var(--stamp-2); }
+  .c3 { --accent: var(--stamp-3); }
+  .c4 { --accent: var(--stamp-4); }
+  .c5 { --accent: var(--stamp-5); }
+  .c6 { --accent: var(--stamp-6); }
+  .c7 { --accent: var(--stamp-7); }
+  .c8 { --accent: var(--stamp-8); }
+
+  @media (max-width: 480px) {
+    .card-body { grid-template-columns: 1fr; }
+    .col:first-child { border-right: none; border-bottom: 1px solid var(--rule); }
+  }
 </style>
 </head>
 <body>
@@ -108,7 +199,6 @@
 
   <!-- Student -->
   <div class="card c1">
-    
     <div class="card-header">
       <span class="card-title">Student</span>
       <span class="card-tag">Primary User</span>
@@ -148,7 +238,6 @@
 
   <!-- Event Organizer -->
   <div class="card c2">
-    
     <div class="card-header">
       <span class="card-title">Event Organizer</span>
       <span class="card-tag">Creator</span>
@@ -187,7 +276,6 @@
 
   <!-- Administrator -->
   <div class="card c3">
-    
     <div class="card-header">
       <span class="card-title">Administrator</span>
       <span class="card-tag">Oversight</span>
@@ -221,7 +309,6 @@
 
   <!-- Event -->
   <div class="card c4">
-    
     <div class="card-header">
       <span class="card-title">Event</span>
       <span class="card-tag">Core Entity</span>
@@ -259,7 +346,6 @@
 
   <!-- Ticket -->
   <div class="card c5">
-    
     <div class="card-header">
       <span class="card-title">Ticket</span>
       <span class="card-tag">Transaction</span>
@@ -294,7 +380,6 @@
 
   <!-- Notification Service -->
   <div class="card c6">
-    
     <div class="card-header">
       <span class="card-title">Notification Service</span>
       <span class="card-tag">Messaging</span>
@@ -327,9 +412,8 @@
     </div>
   </div>
 
-  <!-- Discovery Feed & Recommendation Engine -->
+  <!-- Discovery Feed -->
   <div class="card c7">
-    
     <div class="card-header">
       <span class="card-title">Discovery Feed &amp; Recommendations</span>
       <span class="card-tag">Personalisation</span>
@@ -342,7 +426,7 @@
           <li>Surface admin-pinned featured events</li>
           <li>Personalise feed by followed topics &amp; organizers</li>
           <li>Support keyword search</li>
-          <li>Apply multi-dimension filters (date, location, tag, major)</li>
+          <li>Apply multi-dimension filters</li>
           <li>Surface deadline-imminent events</li>
         </ul>
       </div>
@@ -363,8 +447,7 @@
   </div>
 
   <!-- Authentication Service -->
-  <div class="card c1">
-    
+  <div class="card c8">
     <div class="card-header">
       <span class="card-title">Authentication Service</span>
       <span class="card-tag">Security</span>
@@ -373,10 +456,10 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Authenticate users via email &amp; password</li>
+          <li>Authenticate via email &amp; password</li>
           <li>Support university SSO login</li>
           <li>Handle password reset via email link</li>
-          <li>Enforce role-based access (student / organizer / admin)</li>
+          <li>Enforce role-based access levels</li>
           <li>Maintain session security</li>
         </ul>
       </div>
