@@ -20,6 +20,7 @@
     --stamp-6: #0F4C5C;
     --stamp-7: #5C3D1E;
     --stamp-8: #3B6E22;
+    --stamp-9: #8B3A3A;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -181,6 +182,7 @@
   .c6 { --accent: var(--stamp-6); }
   .c7 { --accent: var(--stamp-7); }
   .c8 { --accent: var(--stamp-8); }
+  .c9 { --accent: var(--stamp-9); }
 
   @media (max-width: 480px) {
     .card-body { grid-template-columns: 1fr; }
@@ -207,15 +209,18 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Browse, search &amp; filter events</li>
-          <li>Filter by date, location, tags, major/school</li>
+          <li>Browse default feed of upcoming events</li>
+          <li>Filter by tags, date, location, major/school</li>
+          <li>Sort feed by date, popularity, recently added</li>
+          <li>Search for upcoming and past events by keyword</li>
           <li>Follow topics &amp; organizers</li>
           <li>RSVP, cancel RSVP, join waitlist</li>
-          <li>Purchase ticket via online transfer</li>
-          <li>Bookmark events for later</li>
-          <li>Export events to personal calendar</li>
-          <li>Submit post-event feedback</li>
-          <li>Set interest preferences on first login</li>
+          <li>Upload payment receipt or transaction ID for paid events</li>
+          <li>Bookmark/favourite events for later</li>
+          <li>Export events to personal calendar (.ics)</li>
+          <li>Leave 5-star rating &amp; text review for attended events</li>
+          <li>View past attended events via "Past Events" tab</li>
+          <li>Set interest preferences on onboarding &amp; update in profile</li>
         </ul>
       </div>
       <div class="col">
@@ -227,11 +232,12 @@
           <li>Discovery Feed</li>
           <li>Calendar Integration</li>
           <li>Authentication Service</li>
+          <li>Review &amp; Rating</li>
         </ul>
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-001</span><span class="us-tag">US-003</span><span class="us-tag">US-004</span><span class="us-tag">US-005</span><span class="us-tag">US-006</span><span class="us-tag">US-007</span><span class="us-tag">US-008</span><span class="us-tag">US-009</span><span class="us-tag">US-010</span><span class="us-tag">US-011</span><span class="us-tag">US-012</span><span class="us-tag">US-013</span><span class="us-tag">US-014</span><span class="us-tag">US-015</span><span class="us-tag">US-017</span><span class="us-tag">US-041</span><span class="us-tag">US-042</span><span class="us-tag">US-043</span><span class="us-tag">US-044</span><span class="us-tag">US-045</span><span class="us-tag">US-046</span>
+      <span class="us-tag">US-001</span><span class="us-tag">US-002</span><span class="us-tag">US-003a</span><span class="us-tag">US-003b</span><span class="us-tag">US-003c</span><span class="us-tag">US-004</span><span class="us-tag">US-005</span><span class="us-tag">US-006a</span><span class="us-tag">US-006b</span><span class="us-tag">US-007</span><span class="us-tag">US-008a</span><span class="us-tag">US-008b</span><span class="us-tag">US-009</span><span class="us-tag">US-010</span><span class="us-tag">US-011</span><span class="us-tag">US-012a</span><span class="us-tag">US-012b</span><span class="us-tag">US-013</span><span class="us-tag">US-014a</span><span class="us-tag">US-014b</span><span class="us-tag">US-015a</span><span class="us-tag">US-016a</span><span class="us-tag">US-016b</span><span class="us-tag">US-017a</span><span class="us-tag">US-017b</span><span class="us-tag">US-034</span><span class="us-tag">US-037a</span><span class="us-tag">US-037b</span><span class="us-tag">US-039a</span><span class="us-tag">US-039b</span><span class="us-tag">US-039c</span><span class="us-tag">US-040</span><span class="us-tag">US-041</span><span class="us-tag">US-042a</span><span class="us-tag">US-043</span><span class="us-tag">US-044a</span><span class="us-tag">US-044b</span><span class="us-tag">US-045b</span><span class="us-tag">US-051</span><span class="us-tag">US-052</span><span class="us-tag">US-053</span><span class="us-tag">US-054</span>
     </div>
   </div>
 
@@ -245,14 +251,18 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Create, edit &amp; delete events</li>
-          <li>Set capacity, ticket types &amp; pricing</li>
+          <li>Register organizer account with name, email &amp; contact details</li>
+          <li>Draft, edit &amp; delete events (title, description, date, time, location)</li>
+          <li>Upload promotional poster image</li>
+          <li>Set capacity, ticket tiers &amp; pricing with payment links</li>
           <li>Set &amp; extend registration windows</li>
-          <li>Upload media graphics &amp; contact info</li>
-          <li>Attach custom registration forms</li>
+          <li>Attach standard/custom questions or external form links</li>
+          <li>Submit event for admin approval &amp; resubmit after rejection</li>
+          <li>Cancel published event with mandatory reason</li>
           <li>Broadcast updates to RSVP'd attendees</li>
-          <li>View rejection feedback &amp; resubmit</li>
-          <li>View registration &amp; attendance analytics</li>
+          <li>View real-time RSVP dashboard &amp; waitlist</li>
+          <li>Confirm or bulk-confirm pending payment registrations</li>
+          <li>View aggregate ratings &amp; individual text reviews</li>
           <li>Generate shareable QR codes &amp; links</li>
         </ul>
       </div>
@@ -264,11 +274,12 @@
           <li>Notification Service</li>
           <li>Ticket</li>
           <li>Authentication Service</li>
+          <li>Review &amp; Rating</li>
         </ul>
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-018</span><span class="us-tag">US-019</span><span class="us-tag">US-020</span><span class="us-tag">US-021</span><span class="us-tag">US-022</span><span class="us-tag">US-023</span><span class="us-tag">US-024</span><span class="us-tag">US-025</span><span class="us-tag">US-026</span><span class="us-tag">US-027</span><span class="us-tag">US-033</span><span class="us-tag">US-034</span><span class="us-tag">US-035</span><span class="us-tag">US-040</span><span class="us-tag">US-047</span><span class="us-tag">US-048</span>
+      <span class="us-tag">US-012c</span><span class="us-tag">US-014c</span><span class="us-tag">US-014d</span><span class="us-tag">US-017c</span><span class="us-tag">US-018a</span><span class="us-tag">US-018b</span><span class="us-tag">US-018c</span><span class="us-tag">US-019</span><span class="us-tag">US-020</span><span class="us-tag">US-021</span><span class="us-tag">US-022</span><span class="us-tag">US-023a</span><span class="us-tag">US-023b</span><span class="us-tag">US-023c</span><span class="us-tag">US-024a</span><span class="us-tag">US-024b</span><span class="us-tag">US-025a</span><span class="us-tag">US-025c</span><span class="us-tag">US-026</span><span class="us-tag">US-027b</span><span class="us-tag">US-035</span><span class="us-tag">US-045a</span><span class="us-tag">US-045c</span><span class="us-tag">US-046</span><span class="us-tag">US-050</span>
     </div>
   </div>
 
@@ -282,10 +293,12 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Approve or reject pending events</li>
-          <li>Provide mandatory rejection reasons</li>
-          <li>View full event details before deciding</li>
-          <li>Feature high-priority events in feed</li>
+          <li>Log in with administrative credentials</li>
+          <li>View dashboard with Approved / Pending / Rejected tabs</li>
+          <li>View full details of a pending event</li>
+          <li>Approve pending events for discovery feed</li>
+          <li>Reject events with mandatory reason text</li>
+          <li>Feature high-priority events at top of feed</li>
           <li>Manage organizer &amp; student accounts</li>
         </ul>
       </div>
@@ -301,7 +314,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-028</span><span class="us-tag">US-029</span><span class="us-tag">US-030</span><span class="us-tag">US-031</span><span class="us-tag">US-032</span><span class="us-tag">US-036</span>
+      <span class="us-tag">US-027a</span><span class="us-tag">US-028</span><span class="us-tag">US-029</span><span class="us-tag">US-030</span><span class="us-tag">US-031</span><span class="us-tag">US-036a</span><span class="us-tag">US-036b</span>
     </div>
   </div>
 
@@ -316,13 +329,15 @@
         <div class="col-label">Responsibilities</div>
         <ul>
           <li>Store title, description, date, time, venue</li>
-          <li>Hold category, tags &amp; media assets</li>
-          <li>Track capacity &amp; remaining spots</li>
-          <li>Manage waitlist queue</li>
+          <li>Store detailed agenda/schedule</li>
+          <li>Hold category, tags, media assets &amp; poster image</li>
+          <li>Store clickable location link &amp; campus map reference</li>
+          <li>Track capacity, remaining spots &amp; waitlist queue</li>
           <li>Maintain approval status lifecycle</li>
-          <li>Store organizer contact details</li>
-          <li>Validate mandatory fields pre-submission</li>
+          <li>Store organizer contact &amp; custom registration questions</li>
           <li>Track registration window open/close</li>
+          <li>Support cancellation with mandatory reason</li>
+          <li>Hold auto-generated shareable link &amp; QR code</li>
         </ul>
       </div>
       <div class="col">
@@ -334,11 +349,12 @@
           <li>Ticket</li>
           <li>Notification Service</li>
           <li>Discovery Feed</li>
+          <li>Review &amp; Rating</li>
         </ul>
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-001</span><span class="us-tag">US-006</span><span class="us-tag">US-009</span><span class="us-tag">US-011</span><span class="us-tag">US-015</span><span class="us-tag">US-018</span><span class="us-tag">US-019</span><span class="us-tag">US-020</span><span class="us-tag">US-021</span><span class="us-tag">US-027</span><span class="us-tag">US-034</span><span class="us-tag">US-042</span><span class="us-tag">US-047</span>
+      <span class="us-tag">US-001</span><span class="us-tag">US-002</span><span class="us-tag">US-011</span><span class="us-tag">US-015a</span><span class="us-tag">US-016a</span><span class="us-tag">US-016b</span><span class="us-tag">US-017c</span><span class="us-tag">US-018a</span><span class="us-tag">US-018b</span><span class="us-tag">US-018c</span><span class="us-tag">US-019</span><span class="us-tag">US-021</span><span class="us-tag">US-023a</span><span class="us-tag">US-023b</span><span class="us-tag">US-023c</span><span class="us-tag">US-026</span><span class="us-tag">US-027b</span><span class="us-tag">US-046</span>
     </div>
   </div>
 
@@ -352,12 +368,14 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Issue ticket (free / paid / member-only)</li>
+          <li>Issue ticket across free / paid tiers</li>
+          <li>Display price &amp; link to external payment channel</li>
+          <li>Accept payment receipt upload or transaction reference ID</li>
+          <li>Track payment status (Pending / Confirmed / Rejected)</li>
           <li>Generate QR code for check-in</li>
-          <li>Process payment via online transfer</li>
-          <li>Handle refunds on cancellation</li>
-          <li>Track ticket status (active/used/refunded)</li>
-          <li>Enforce capacity limits on issue</li>
+          <li>Track ticket status (active / used / cancelled)</li>
+          <li>Enforce capacity limits per tier on issue</li>
+          <li>Auto-upgrade waitlisted student when spot opens</li>
         </ul>
       </div>
       <div class="col">
@@ -365,14 +383,13 @@
         <ul>
           <li>Student</li>
           <li>Event</li>
-          <li>Payment Gateway</li>
-          <li>Notification Service</li>
           <li>Event Organizer</li>
+          <li>Notification Service</li>
         </ul>
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-009</span><span class="us-tag">US-012</span><span class="us-tag">US-013</span><span class="us-tag">US-017</span><span class="us-tag">US-024</span><span class="us-tag">US-046</span>
+      <span class="us-tag">US-007</span><span class="us-tag">US-009</span><span class="us-tag">US-011</span><span class="us-tag">US-012a</span><span class="us-tag">US-012b</span><span class="us-tag">US-012c</span><span class="us-tag">US-013</span><span class="us-tag">US-017a</span><span class="us-tag">US-017b</span><span class="us-tag">US-024a</span><span class="us-tag">US-024b</span><span class="us-tag">US-045a</span><span class="us-tag">US-045b</span><span class="us-tag">US-045c</span>
     </div>
   </div>
 
@@ -386,12 +403,14 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Send 24-hour event reminders</li>
-          <li>Alert students of scheduling conflicts</li>
-          <li>Notify bookmark deadline / low ticket thresholds</li>
-          <li>Push event update &amp; cancellation alerts</li>
-          <li>Send rejection feedback to organizers</li>
-          <li>Notify waitlisted students of open spots</li>
+          <li>Send 24-hour event reminders to RSVP'd students</li>
+          <li>Alert students of scheduling conflicts (visual indicator &amp; RSVP prompt)</li>
+          <li>Notify bookmarked-event registration deadline (24 hrs prior)</li>
+          <li>Alert when bookmarked event drops to 10 tickets</li>
+          <li>Push event update, rescheduling &amp; cancellation alerts</li>
+          <li>Send rejection feedback notifications to organizers</li>
+          <li>Notify waitlisted students of auto-upgraded RSVP</li>
+          <li>Notify payment confirmation or rejection to students</li>
         </ul>
       </div>
       <div class="col">
@@ -405,7 +424,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-007</span><span class="us-tag">US-010</span><span class="us-tag">US-020</span><span class="us-tag">US-033</span><span class="us-tag">US-040</span><span class="us-tag">US-045</span>
+      <span class="us-tag">US-008a</span><span class="us-tag">US-008b</span><span class="us-tag">US-010</span><span class="us-tag">US-012b</span><span class="us-tag">US-017a</span><span class="us-tag">US-017b</span><span class="us-tag">US-020</span><span class="us-tag">US-027a</span><span class="us-tag">US-027b</span><span class="us-tag">US-044a</span><span class="us-tag">US-044b</span><span class="us-tag">US-045a</span>
     </div>
   </div>
 
@@ -419,12 +438,18 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Display approved events in ranked feed</li>
-          <li>Surface admin-pinned featured events</li>
-          <li>Personalise feed by followed topics &amp; organizers</li>
-          <li>Support keyword search</li>
-          <li>Apply multi-dimension filters</li>
-          <li>Surface deadline-imminent events</li>
+          <li>Display default list of all upcoming approved events</li>
+          <li>Organise feed into labelled sections (Featured, Recommended, Upcoming)</li>
+          <li>Surface admin-pinned featured events at top</li>
+          <li>Personalise feed by followed topics, organizers &amp; saved tag preferences</li>
+          <li>Provide dedicated "Following" tab</li>
+          <li>Suggest events based on RSVP history</li>
+          <li>Support keyword search across upcoming &amp; past events</li>
+          <li>Apply multi-dimension filters (tags, date, location, major/school)</li>
+          <li>Sort events by date, popularity, or recently added</li>
+          <li>Paginate or infinitely scroll event listings</li>
+          <li>Surface "Last Chance" badge for deadlines within 24 hours</li>
+          <li>Show schedule-conflict indicators on event cards</li>
         </ul>
       </div>
       <div class="col">
@@ -438,7 +463,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-003</span><span class="us-tag">US-004</span><span class="us-tag">US-005</span><span class="us-tag">US-030</span><span class="us-tag">US-039</span><span class="us-tag">US-041</span><span class="us-tag">US-042</span>
+      <span class="us-tag">US-003a</span><span class="us-tag">US-003b</span><span class="us-tag">US-003c</span><span class="us-tag">US-004</span><span class="us-tag">US-005</span><span class="us-tag">US-006a</span><span class="us-tag">US-006b</span><span class="us-tag">US-008a</span><span class="us-tag">US-030</span><span class="us-tag">US-039a</span><span class="us-tag">US-039b</span><span class="us-tag">US-039c</span><span class="us-tag">US-040</span><span class="us-tag">US-041</span><span class="us-tag">US-051</span><span class="us-tag">US-052</span><span class="us-tag">US-053</span><span class="us-tag">US-054</span>
     </div>
   </div>
 
@@ -452,9 +477,10 @@
       <div class="col">
         <div class="col-label">Responsibilities</div>
         <ul>
-          <li>Authenticate via email &amp; password</li>
-          <li>Support university SSO login</li>
-          <li>Handle password reset via email link</li>
+          <li>Register student accounts with university email &amp; password</li>
+          <li>Register organizer accounts with name, email &amp; contact details</li>
+          <li>Authenticate students, organizers &amp; admins via email/password</li>
+          <li>Handle password reset via secure email link</li>
           <li>Enforce role-based access levels</li>
           <li>Maintain session security</li>
         </ul>
@@ -465,11 +491,44 @@
           <li>Student</li>
           <li>Event Organizer</li>
           <li>Administrator</li>
+          <li>Discovery Feed</li>
         </ul>
       </div>
     </div>
     <div class="card-footer">
-      <span class="us-tag">US-035</span><span class="us-tag">US-036</span><span class="us-tag">US-037</span><span class="us-tag">US-038</span>
+      <span class="us-tag">US-035</span><span class="us-tag">US-036a</span><span class="us-tag">US-037a</span><span class="us-tag">US-037b</span><span class="us-tag">US-038</span><span class="us-tag">US-050</span>
+    </div>
+  </div>
+
+  <!-- Review & Rating (NEW) -->
+  <div class="card c9">
+    <div class="card-header">
+      <span class="card-title">Review &amp; Rating</span>
+      <span class="card-tag">Feedback</span>
+    </div>
+    <div class="card-body">
+      <div class="col">
+        <div class="col-label">Responsibilities</div>
+        <ul>
+          <li>Accept 5-star rating submission from attended students</li>
+          <li>Accept text review submission from attended students</li>
+          <li>Gate submissions to confirmed attendees only</li>
+          <li>Compute &amp; expose aggregate rating statistics per event</li>
+          <li>Allow organizers to browse reviews filtered by event</li>
+          <li>Surface "Past Events" tab on student profile with review links</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="col-label">Collaborates With</div>
+        <ul>
+          <li>Student</li>
+          <li>Event</li>
+          <li>Event Organizer</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="us-tag">US-014a</span><span class="us-tag">US-014b</span><span class="us-tag">US-014c</span><span class="us-tag">US-014d</span><span class="us-tag">US-034</span>
     </div>
   </div>
 
